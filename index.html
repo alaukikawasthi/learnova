@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learnova — Learn skills that get you hired</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap navbar">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="#1B2A4A"/>
+        <path d="M18,78 C18,56 30,40 47,35" stroke="#2F4F3E" stroke-width="9" stroke-linecap="round" fill="none"/>
+        <circle cx="47" cy="35" r="8.5" fill="#2F4F3E"/>
+        <path d="M82,78 C82,60 72,49 57,42" stroke="#D9A441" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+        <circle cx="56" cy="41" r="6.5" fill="#D9A441"/>
+        <circle cx="51" cy="30" r="3" fill="#F7F7F2"/>
+      </svg>
+      Learnova
+    </div>
+    <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#why">Why Learnova</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#enroll" class="btn btn-primary btn-sm">Enroll now</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="primaryNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">New courses now open</p>
+        <h1>Learn Smarter. <em>Build Your Future.</em></h1>
+        <p class="lede">Learnova is an AI-powered learning platform built for Indian college students, freshers and young professionals — practical, job-ready skills taught in small live batches with a friendly AI learning assistant by your side.</p>
+        <div class="hero-actions">
+          <a href="#enroll" class="btn btn-primary">Start Learning →</a>
+          <a href="#courses" class="btn btn-ghost">Explore Courses</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 560 460" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#2F4F3E"/>
+              <stop offset="100%" stop-color="#1B2A4A"/>
+            </linearGradient>
+            <linearGradient id="robotBody" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#F7F7F2"/>
+              <stop offset="100%" stop-color="#EDEEE6"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="560" height="460" rx="26" fill="url(#bg1)"/>
+          <circle cx="470" cy="70" r="70" fill="#D9A441" opacity="0.18"/>
+          <circle cx="60" cy="400" r="90" fill="#D9A441" opacity="0.12"/>
+
+          <!-- laptop / desk -->
+          <rect x="60" y="330" width="440" height="14" rx="4" fill="#0f1930" opacity="0.35"/>
+
+          <!-- student 1 -->
+          <g>
+            <circle cx="140" cy="230" r="30" fill="#E7B98C"/>
+            <path d="M110 226c0-22 18-38 30-38s30 16 30 38" fill="#3B2A20"/>
+            <rect x="100" y="258" width="80" height="76" rx="16" fill="#D9A441"/>
+            <rect x="118" y="300" width="44" height="34" rx="8" fill="#F7F7F2"/>
+          </g>
+
+          <!-- student 2 -->
+          <g>
+            <circle cx="240" cy="216" r="32" fill="#B97A56"/>
+            <path d="M206 214c0-24 15-44 34-44s34 20 34 44" fill="#241812"/>
+            <rect x="200" y="246" width="86" height="88" rx="18" fill="#2F4F3E"/>
+            <rect x="218" y="292" width="50" height="38" rx="8" fill="#F7F7F2"/>
+          </g>
+
+          <!-- friendly robot assistant -->
+          <g>
+            <rect x="330" y="180" width="120" height="110" rx="22" fill="url(#robotBody)"/>
+            <circle cx="365" cy="222" r="10" fill="#1B2A4A"/>
+            <circle cx="415" cy="222" r="10" fill="#1B2A4A"/>
+            <path d="M362 252c10 12 46 12 56 0" stroke="#1B2A4A" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <rect x="378" y="140" width="24" height="34" rx="10" fill="url(#robotBody)"/>
+            <circle cx="390" cy="132" r="9" fill="#D9A441"/>
+            <rect x="300" y="230" width="26" height="14" rx="7" fill="url(#robotBody)"/>
+            <rect x="454" y="230" width="26" height="14" rx="7" fill="url(#robotBody)"/>
+            <rect x="345" y="292" width="90" height="34" rx="14" fill="url(#robotBody)"/>
+          </g>
+
+          <!-- floating UI chips -->
+          <g font-family="IBM Plex Mono, monospace" font-size="13" fill="#F7F7F2">
+            <g class="float-chip float-chip-1">
+              <rect x="55" y="55" width="120" height="40" rx="10" fill="#1B2A4A" stroke="#D9A441" stroke-width="1"/>
+              <text x="71" y="80">&lt;/&gt; Python</text>
+            </g>
+            <g class="float-chip float-chip-2">
+              <rect x="355" y="332" width="146" height="40" rx="10" fill="#1B2A4A" stroke="#D9A441" stroke-width="1"/>
+              <text x="373" y="357">AI &amp; Data Science</text>
+            </g>
+            <g class="float-chip float-chip-3">
+              <rect x="30" y="200" width="66" height="66" rx="16" fill="#F7F7F2" stroke="#2F4F3E" stroke-width="1"/>
+              <path d="M50 232l9 9 15-17" stroke="#2F4F3E" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(-6,-6)"/>
+            </g>
+            <g class="float-chip float-chip-4">
+              <rect x="470" y="150" width="60" height="60" rx="30" fill="#D9A441"/>
+              <text x="486" y="186" font-size="22" fill="#1B2A4A">✦</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>AI-201 AI &amp; Machine Learning</span>
+      <span>WEB-101 Web Development</span>
+      <span>PY-102 Python Programming</span>
+      <span>DS-210 Data Science</span>
+      <span>COM-110 Communication &amp; Interview Skills</span>
+      <span>DM-130 Digital Marketing</span>
+      <span>AI-201 AI &amp; Machine Learning</span>
+      <span>WEB-101 Web Development</span>
+      <span>PY-102 Python Programming</span>
+      <span>DS-210 Data Science</span>
+      <span>COM-110 Communication &amp; Interview Skills</span>
+      <span>DM-130 Digital Marketing</span>
+    </div>
+  </div>
+
+  <section class="about reveal" id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">About Learnova</p>
+        <h2>Built for students and freshers, not just professionals.</h2>
+      </div>
+      <div class="about-grid">
+        <div>
+          <p>Learnova started with a simple idea: most college students in India graduate strong on theory but short on the practical, job-ready skills recruiters actually look for. So we built short, live courses — taught by working professionals and supported by an AI learning assistant — that fit around your semester, internship or first job.</p>
+          <p>Every course ends with something real: a live project, a mock interview, a portfolio piece — not just a PDF certificate you never open again.</p>
+        </div>
+        <div>
+          <div class="stat-row">
+            <div class="stat"><div class="num">4–6</div><div class="label">weeks per course</div></div>
+            <div class="stat"><div class="num">20</div><div class="label">seats, max</div></div>
+            <div class="stat"><div class="num">6</div><div class="label">courses live now</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why reveal" id="why">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">Why Learnova</p>
+        <h2>A learning platform built around how students actually learn.</h2>
+      </div>
+      <div class="card-grid-4">
+        <div class="why-card">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="9" rx="2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <h3>AI-powered learning</h3>
+          <p>A built-in AI assistant explains concepts, checks your work and answers doubts at 2am before an exam.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h8l-1 8 10-12h-8z"/></svg></div>
+          <h3>Industry-relevant skills</h3>
+          <p>Curriculum built with inputs from hiring managers, updated every term so you're learning what's used today.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+          <h3>Beginner-friendly</h3>
+          <p>No prior experience assumed. We start from zero and build up in small, well-paced steps every week.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3>Career &amp; interview prep</h3>
+          <p>Resume reviews, mock interviews and placement-style projects built into every course, not sold separately.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how reveal" id="how">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">Your learning journey</p>
+        <h2>How Learnova works.</h2>
+        <p>Four steps from picking a course to walking into an interview ready.</p>
+      </div>
+      <div class="journey">
+        <div class="journey-step">
+          <div class="journey-num">01</div>
+          <h3>Choose Your Path</h3>
+          <p>Pick a course that matches where you are — first year, final year, or already working.</p>
+        </div>
+        <div class="journey-step">
+          <div class="journey-num">02</div>
+          <h3>Learn with AI</h3>
+          <p>Join live sessions with a small batch, backed by an AI assistant for practice and doubts anytime.</p>
+        </div>
+        <div class="journey-step">
+          <div class="journey-num">03</div>
+          <h3>Practice &amp; Build</h3>
+          <p>Apply what you learn through real projects, assignments and hands-on exercises each week.</p>
+        </div>
+        <div class="journey-step">
+          <div class="journey-num">04</div>
+          <h3>Get Career Ready</h3>
+          <p>Finish with a portfolio project, resume review and interview prep you can show recruiters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="courses reveal" id="courses">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Popular courses</p>
+        <h2>Six courses, built for where you are right now.</h2>
+        <p>Live, evenings and weekends — recordings included if you miss a session.</p>
+      </div>
+      <div class="course-cards">
+
+        <div class="course-card">
+          <div class="course-top">
+            <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.4"/><circle cx="5" cy="17" r="2.4"/><circle cx="19" cy="17" r="2.4"/><path d="M12 7.4v3.6M12 11l-5.4 4M12 11l5.4 4"/></svg>
+            <div class="course-code">AI-201</div>
+            <h3>AI &amp; Machine Learning</h3>
+          </div>
+          <div class="course-body">
+            <p>Core ML concepts, hands-on model building, and a taste of how AI tools are used in real products.</p>
+            <div class="course-tags"><span class="tag">8 weeks</span><span class="tag">Intermediate</span></div>
+            <div class="course-foot">
+              <div class="course-price">₹8,999<span>one-time</span></div>
+              <a href="#enroll" class="btn btn-ghost btn-sm">Enroll</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-top">
+            <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <div class="course-code">WEB-101</div>
+            <h3>Web Development</h3>
+          </div>
+          <div class="course-body">
+            <p>HTML, CSS, JavaScript and a live capstone site you build and deploy yourself.</p>
+            <div class="course-tags"><span class="tag">6 weeks</span><span class="tag">Beginner</span></div>
+            <div class="course-foot">
+              <div class="course-price">₹4,999<span>one-time</span></div>
+              <a href="#enroll" class="btn btn-ghost btn-sm">Enroll</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-top">
+            <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17V7a2 2 0 0 1 2-2h6l2 2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/></svg>
+            <div class="course-code">PY-102</div>
+            <h3>Python Programming</h3>
+          </div>
+          <div class="course-body">
+            <p>Core programming logic, Python fundamentals, and small automation projects.</p>
+            <div class="course-tags"><span class="tag">5 weeks</span><span class="tag">Beginner</span></div>
+            <div class="course-foot">
+              <div class="course-price">₹3,999<span>one-time</span></div>
+              <a href="#enroll" class="btn btn-ghost btn-sm">Enroll</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-top">
+            <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 4 4 5-6"/></svg>
+            <div class="course-code">DS-210</div>
+            <h3>Data Science</h3>
+          </div>
+          <div class="course-body">
+            <p>Data analysis, visualisation and statistics — the foundation used across every data role.</p>
+            <div class="course-tags"><span class="tag">7 weeks</span><span class="tag">Intermediate</span></div>
+            <div class="course-foot">
+              <div class="course-price">₹6,999<span>one-time</span></div>
+              <a href="#enroll" class="btn btn-ghost btn-sm">Enroll</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-top">
+            <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <div class="course-code">COM-110</div>
+            <h3>Communication &amp; Interview Skills</h3>
+          </div>
+          <div class="course-body">
+            <p>Group discussions, HR rounds and technical interviews, practised with real feedback.</p>
+            <div class="course-tags"><span class="tag">4 weeks</span><span class="tag">Beginner</span></div>
+            <div class="course-foot">
+              <div class="course-price">₹2,999<span>one-time</span></div>
+              <a href="#enroll" class="btn btn-ghost btn-sm">Enroll</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-top">
+            <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+            <div class="course-code">DM-130</div>
+            <h3>Digital Marketing</h3>
+          </div>
+          <div class="course-body">
+            <p>SEO, social media and performance marketing basics with a real campaign project.</p>
+            <div class="course-tags"><span class="tag">5 weeks</span><span class="tag">Beginner</span></div>
+            <div class="course-foot">
+              <div class="course-price">₹4,499<span>one-time</span></div>
+              <a href="#enroll" class="btn btn-ghost btn-sm">Enroll</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="impact reveal">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow" style="color:var(--mustard);">Platform goals</p>
+        <h2>What Learnova is building toward</h2>
+        <p>These are illustrative platform goals for this project demo, not verified real-world figures.</p>
+      </div>
+      <div class="impact-grid">
+        <div class="impact-stat"><div class="num">6</div><div class="label">structured learning paths</div></div>
+        <div class="impact-stat"><div class="num">150+</div><div class="label">practical, project-based lessons</div></div>
+        <div class="impact-stat"><div class="num">24/7</div><div class="label">AI-powered learning guidance</div></div>
+        <div class="impact-stat"><div class="num">4.7 / 5</div><div class="label">target course satisfaction</div></div>
+      </div>
+      <p class="impact-note">*Demo/platform goals for illustration only — not claims of actual usage data.</p>
+    </div>
+  </section>
+
+  <section class="testimonials reveal" id="testimonials">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">Student voices</p>
+        <h2>What Learnova students say.</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <blockquote>"I joined WEB-101 with zero coding background. Six weeks later I had a live portfolio site and enough confidence to apply for internships."</blockquote>
+          <div class="testi-person">
+            <div class="testi-avatar">AS</div>
+            <div><div class="name">Aarav Sharma</div><div class="role">2nd year, B.Tech CSE</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <blockquote>"The interview prep course was the most useful thing I did in my final year. The mock HR rounds felt exactly like the real thing."</blockquote>
+          <div class="testi-person">
+            <div class="testi-avatar">AV</div>
+            <div><div class="name">Ananya Verma</div><div class="role">Final year, B.Com</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <blockquote>"Data Science pushed me way beyond what my college syllabus covered. The AI assistant was genuinely useful for debugging at midnight."</blockquote>
+          <div class="testi-person">
+            <div class="testi-avatar">RM</div>
+            <div><div class="name">Rohan Mehta</div><div class="role">Fresher, Data Analyst</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq reveal" id="faq">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">FAQ</p>
+        <h2>Common questions from students.</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Is Learnova beginner-friendly?</summary>
+          <p>Yes. Most courses, including Web Development and Python Programming, assume no prior experience and build up from the fundamentals.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What courses are available?</summary>
+          <p>AI &amp; Machine Learning, Web Development, Python Programming, Data Science, Communication &amp; Interview Skills, and Digital Marketing — with more added each term.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I learn at my own pace?</summary>
+          <p>Live sessions follow a weekly schedule, but every class is recorded, so you can revisit lessons and catch up in your own time.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Are certificates available?</summary>
+          <p>Yes, every course ends with a certificate of completion, along with a project or portfolio piece you can share with recruiters.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is Learnova suitable for college students?</summary>
+          <p>Yes. Batches run on evenings and weekends specifically so students can attend alongside their regular college schedule.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you offer placement or interview support?</summary>
+          <p>Our Communication &amp; Interview Skills course, and the career prep built into every course, cover resume reviews and mock interviews. We don't guarantee placements.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta reveal">
+    <div class="wrap">
+      <h2>Start learning today.</h2>
+      <p>Join thousands of students and freshers building real, job-ready skills with Learnova.</p>
+      <a href="#enroll" class="btn btn-primary">Start Learning Today →</a>
+    </div>
+  </section>
+
+  <section class="enroll reveal" id="enroll">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Enroll</p>
+        <h2>Reserve your seat for the next batch.</h2>
+        <p>Tell us which course you're interested in and we'll send the syllabus and next steps.</p>
+      </div>
+      <div class="enroll-grid">
+        <ul class="contact-list">
+          <li><span class="k">Demo contact email</span><span class="v">hello@learnova.demo</span></li>
+          <li><span class="k">Response time</span><span class="v">Within 1 business day</span></li>
+          <li><span class="k">Format</span><span class="v">Fully online, live batches</span></li>
+          <li><span class="k">Payment options</span><span class="v">EMI available on every course</span></li>
+        </ul>
+        <form class="form-card" id="enrollForm">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Ananya Verma" required>
+          <label for="course">Course</label>
+          <select id="course">
+            <option>AI-201 — AI &amp; Machine Learning</option>
+            <option>WEB-101 — Web Development</option>
+            <option>PY-102 — Python Programming</option>
+            <option>DS-210 — Data Science</option>
+            <option>COM-110 — Communication &amp; Interview Skills</option>
+            <option>DM-130 — Digital Marketing</option>
+          </select>
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@email.com" required>
+          <button type="submit" class="btn btn-primary">Request the syllabus</button>
+          <div class="form-confirm" id="formConfirm">✓ Thanks! This is a demo form — no data was submitted. We'd email you the syllabus here.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand" style="color:var(--paper-light);">
+          <svg class="brand-mark footer-mark" viewBox="0 0 100 100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="48" fill="#1B2A4A"/>
+            <path d="M18,78 C18,56 30,40 47,35" stroke="#2F4F3E" stroke-width="9" stroke-linecap="round" fill="none"/>
+            <circle cx="47" cy="35" r="8.5" fill="#2F4F3E"/>
+            <path d="M82,78 C82,60 72,49 57,42" stroke="#D9A441" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+            <circle cx="56" cy="41" r="6.5" fill="#D9A441"/>
+            <circle cx="51" cy="30" r="3" fill="#F7F7F2"/>
+          </svg>
+          Learnova
+        </div>
+        <p>AI-powered, practical courses for Indian college students, freshers and young professionals.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#enroll">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li>hello@learnova.demo <span style="opacity:0.55; font-size:0.78rem;">(demo contact)</span></li>
+          <li><a href="#enroll">Enroll now</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-row">
+      <p>© 2026 Learnova. All rights reserved.</p>
+      <p>Made for students, by people who remember being one.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
