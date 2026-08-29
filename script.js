@@ -111,206 +111,89 @@ if (enrollForm && formConfirm) {
 
 
 // =========================================================
-// LEARNOVA — AI TUTOR
-// PROFESSIONAL THINKING ANIMATION
+// AI TUTOR — DEMO CHAT WITH THINKING ANIMATION
 // =========================================================
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
 
+    var messagesEl = document.getElementById('aiMessages');
+    var thinkingEl = document.getElementById('aiThinking');
+    var chatForm = document.getElementById('aiChatForm');
+    var questionInput = document.getElementById('aiQuestion');
 
-    // -----------------------------------------------------
-    // AI TUTOR SEARCH / THINKING TEXT
-    // -----------------------------------------------------
-
-    var tutorSearching =
-        document.querySelector(".ai-tutor-searching");
-
-
-    if (tutorSearching) {
-
-        var messages = [
-
-            "AI Tutor is thinking",
-
-            "Finding the best explanation",
-
-            "Personalizing your learning",
-
-            "Analyzing your question",
-
-            "Preparing your answer"
-
-        ];
-
-
-        var messageIndex = 0;
-
-
-        function updateTutorMessage() {
-
-            tutorSearching.innerHTML =
-
-                '<span class="ai-tutor-message">' +
-                    messages[messageIndex] +
-                '</span>' +
-
-                '<span class="ai-tutor-dots">' +
-
-                    '<span>.</span>' +
-                    '<span>.</span>' +
-                    '<span>.</span>' +
-
-                '</span>';
-
-
-            messageIndex =
-                (messageIndex + 1) % messages.length;
-
-        }
-
-
-        updateTutorMessage();
-
-
-        setInterval(
-            updateTutorMessage,
-            2200
-        );
-
+    if (!messagesEl || !thinkingEl || !chatForm || !questionInput) {
+        return;
     }
 
 
-    // -----------------------------------------------------
-    // AI TUTOR ORB INTERACTION
-    // -----------------------------------------------------
+    var demoReplies = {
+        default:
+            "Great question. Here's a simple way to think about it: break the idea into small pieces, learn one piece at a time, and connect them with a real example. Try asking about a specific topic — neural networks, Python loops, or interview tips.",
+        neural:
+            "Think of a neural network like a simplified brain. It learns patterns from examples, then uses those patterns to make predictions on new information — the same way you recognise a face after seeing it a few times.",
+        machine:
+            "Machine learning is teaching a computer with examples. It finds patterns in data and uses those patterns to make predictions on new information — without being hand-coded for every case.",
+        python:
+            "Python is a clear, readable programming language. You write instructions in plain-looking syntax, and it runs them step by step — ideal for beginners and for data, AI and web work.",
+        interview:
+            "For interviews: prepare 2–3 stories about projects you've built, practice explaining them in under two minutes, and always end with what you learned. Confidence comes from rehearsal.",
+        data:
+            "Data science is turning raw numbers into useful decisions. You clean the data, explore patterns, build models, and explain results so others can act on them."
+    };
 
-    var tutorOrb =
-        document.querySelector(".ai-tutor-orb");
-
-
-    if (tutorOrb) {
-
-        tutorOrb.addEventListener(
-            "mouseenter",
-            function () {
-
-                tutorOrb.style.transform =
-                    "scale(1.08)";
-
-            }
-        );
-
-
-        tutorOrb.addEventListener(
-            "mouseleave",
-            function () {
-
-                tutorOrb.style.transform = "";
-
-            }
-        );
-
-
-        tutorOrb.addEventListener(
-            "click",
-            function () {
-
-                tutorOrb.style.transform =
-                    "scale(0.92)";
-
-
-                setTimeout(
-                    function () {
-
-                        tutorOrb.style.transform =
-                            "scale(1.08)";
-
-                    },
-                    150
-                );
-
-
-                setTimeout(
-                    function () {
-
-                        tutorOrb.style.transform = "";
-
-                    },
-                    400
-                );
-
-            }
-        );
-
+    function pickReply(text) {
+        var t = (text || '').toLowerCase();
+        if (t.indexOf('neural') !== -1) return demoReplies.neural;
+        if (t.indexOf('machine') !== -1 || t.indexOf('ml') !== -1) return demoReplies.machine;
+        if (t.indexOf('python') !== -1) return demoReplies.python;
+        if (t.indexOf('interview') !== -1 || t.indexOf('resume') !== -1) return demoReplies.interview;
+        if (t.indexOf('data') !== -1) return demoReplies.data;
+        return demoReplies.default;
     }
 
-
-    // -----------------------------------------------------
-    // AI TUTOR — PERIODIC "THINKING" EFFECT
-    // -----------------------------------------------------
-
-    var tutorCard =
-        document.querySelector(".ai-tutor-card");
-
-
-    if (tutorCard) {
-
-        setInterval(
-            function () {
-
-                tutorCard.classList.add(
-                    "ai-tutor-thinking"
-                );
-
-
-                setTimeout(
-                    function () {
-
-                        tutorCard.classList.remove(
-                            "ai-tutor-thinking"
-                        );
-
-                    },
-                    1200
-                );
-
-            },
-            5000
-        );
-
+    function appendMessage(text, type) {
+        var div = document.createElement('div');
+        div.className = 'ai-message ' + type;
+        div.textContent = text;
+        messagesEl.insertBefore(div, thinkingEl);
+        messagesEl.scrollTop = messagesEl.scrollHeight;
+        return div;
     }
 
+    var busy = false;
 
-    // -----------------------------------------------------
-    // QR CODE — OPTIONAL SMOOTH HOVER
-    // -----------------------------------------------------
+    chatForm.addEventListener('submit', function (e) {
+        e.preventDefault();
 
-    var qrBox =
-        document.querySelector(".qr-box");
+        if (busy) return;
 
+        var q = questionInput.value.trim();
+        if (!q) return;
 
-    if (qrBox) {
+        busy = true;
+        questionInput.value = '';
+        questionInput.disabled = true;
+        chatForm.querySelector('button').disabled = true;
 
-        qrBox.addEventListener(
-            "mouseenter",
-            function () {
+        appendMessage(q, 'user-message');
 
-                qrBox.style.transform =
-                    "translateY(-3px) scale(1.03)";
+        thinkingEl.hidden = false;
+        thinkingEl.setAttribute('aria-hidden', 'false');
+        messagesEl.scrollTop = messagesEl.scrollHeight;
 
-            }
-        );
+        var delay = 1100 + Math.floor(Math.random() * 700);
 
+        setTimeout(function () {
+            thinkingEl.hidden = true;
+            thinkingEl.setAttribute('aria-hidden', 'true');
 
-        qrBox.addEventListener(
-            "mouseleave",
-            function () {
+            appendMessage(pickReply(q), 'bot-message');
 
-                qrBox.style.transform = "";
-
-            }
-        );
-
-    }
+            busy = false;
+            questionInput.disabled = false;
+            chatForm.querySelector('button').disabled = false;
+            questionInput.focus();
+        }, delay);
+    });
 
 });
