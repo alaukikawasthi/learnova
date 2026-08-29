@@ -829,161 +829,98 @@
 
             <div class="ai-tutor-shell">
 
-                <div class="ai-tutor-intro">
-
-                    <div class="ai-badge">
-                        <span class="ai-pulse"></span>
-                        Learnova AI Tutor
-                    </div>
-
-                    <h3>
-                        Your questions.
-                        Explained simply.
-                    </h3>
-
-                    <p>
-                        Stuck on a concept? Ask your AI learning companion
-                        and get a clear, student-friendly explanation in seconds.
-                    </p>
-
-
-                    <div class="ai-tutor-points">
-
-                        <span>
-                            ✓ Explain difficult topics
-                        </span>
-
-                        <span>
-                            ✓ Practice before exams
-                        </span>
-
-                        <span>
-                            ✓ Get step-by-step guidance
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="ai-chat"
-                     aria-label="AI tutor demonstration">
+                <!-- Chat interface (primary) -->
+                <div class="ai-chat" aria-label="AI tutor demonstration">
 
                     <div class="ai-chat-head">
 
-                        <div class="ai-avatar"
-                             aria-hidden="true">
-
-                            <svg viewBox="0 0 64 64"
-                                 fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-
-                                <rect x="13"
-                                      y="16"
-                                      width="38"
-                                      height="34"
-                                      rx="13"
-                                      fill="white"
-                                      opacity=".98"/>
-
-                                <path d="M32 10v6"
-                                      stroke="white"
-                                      stroke-width="3"
-                                      stroke-linecap="round"/>
-
-                                <circle cx="32"
-                                        cy="8"
-                                        r="3"
-                                        fill="#D9A441"/>
-
-                                <circle cx="25"
-                                        cy="31"
-                                        r="3"
-                                        fill="#1B2A4A"/>
-
-                                <circle cx="39"
-                                        cy="31"
-                                        r="3"
-                                        fill="#1B2A4A"/>
-
-                                <path d="M24 39c4.2 4 11.8 4 16 0"
-                                      stroke="#2F4F3E"
-                                      stroke-width="2.8"
-                                      stroke-linecap="round"/>
-
-                            </svg>
-
+                        <div class="ai-avatar" aria-hidden="true">
+                            <span class="ai-avatar-core"></span>
                         </div>
 
-
-                        <div>
-
-                            <strong>
-                                Learnova AI
-                            </strong>
-
-                            <span>
-                                <i></i>
-                                Online • Study companion
+                        <div class="ai-chat-meta">
+                            <strong>Learnova AI</strong>
+                            <span class="ai-status">
+                                <i class="ai-status-dot"></i>
+                                Online · Study companion
                             </span>
-
                         </div>
 
                     </div>
 
 
-                    <div class="ai-messages"
-                         id="aiMessages">
+                    <div class="ai-messages" id="aiMessages">
 
                         <div class="ai-message user-message">
-                            Explain machine learning in simple words.
+                            Can you explain neural networks in simple words?
                         </div>
 
-                        <div class="ai-message bot-message">
-                            Think of it like teaching a computer with examples.
-                            It finds patterns in the data and uses those patterns
-                            to make predictions on new information.
+                        <div class="ai-message bot-message" id="aiBotMessage">
+                            Think of a neural network like a simplified brain.
+                            It learns patterns from examples, then uses those
+                            patterns to make predictions on new information —
+                            the same way you recognise a face after seeing it a few times.
                         </div>
 
-                        <!-- Animated thinking indicator -->
-
-                        <div class="ai-thinking"
-                             id="aiThinking"
-                             aria-hidden="true">
-
-                            <span></span>
-                            <span></span>
-                            <span></span>
-
+                        <div class="ai-thinking" id="aiThinking" hidden aria-hidden="true">
+                            <span class="ai-thinking-label">Thinking</span>
+                            <span class="ai-thinking-dots">
+                                <span></span><span></span><span></span>
+                            </span>
                         </div>
 
                     </div>
 
 
-                    <form class="ai-chat-form"
-                          id="aiChatForm">
+                    <form class="ai-chat-form" id="aiChatForm">
 
-                        <label class="sr-only"
-                               for="aiQuestion">
+                        <label class="sr-only" for="aiQuestion">
                             Ask your AI tutor
                         </label>
 
                         <input id="aiQuestion"
                                type="text"
                                placeholder="Ask your AI tutor..."
-                               autocomplete="off">
+                               autocomplete="off"
+                               maxlength="200">
 
-                        <button type="submit"
-                                aria-label="Send question">
+                        <button type="submit" aria-label="Send question">
                             →
                         </button>
 
                     </form>
 
-
                     <p class="ai-demo-note">
-                        Demo interface — no data is sent anywhere.
+                        Demo interface — try a question. No data is sent anywhere.
                     </p>
+
+                </div>
+
+
+                <!-- Small AI visual (secondary) -->
+                <div class="ai-visual" aria-hidden="true">
+
+                    <div class="ai-orb-wrap">
+                        <div class="ai-orb-ring"></div>
+                        <div class="ai-orb-ring ai-orb-ring-2"></div>
+                        <div class="ai-orb">
+                            <span class="ai-orb-shine"></span>
+                            <span class="ai-orb-icon">✦</span>
+                        </div>
+                    </div>
+
+                    <p class="ai-visual-label">
+                        Learnova AI
+                    </p>
+                    <p class="ai-visual-sub">
+                        Always ready to help
+                    </p>
+
+                    <ul class="ai-visual-points">
+                        <li>Explains hard topics simply</li>
+                        <li>Practice before exams</li>
+                        <li>Step-by-step guidance</li>
+                    </ul>
 
                 </div>
 
